@@ -3,7 +3,7 @@ Elanna Grossman
 November 15, 2015
 GeekWise Javascript I
 
-This files contains some shortcut functions
+This file contains some shortcut functions
 to manipulate the values for two input textboxes.
 It also sets up an event handler to handle
 button clicks on the page.
