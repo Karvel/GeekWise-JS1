@@ -26,12 +26,20 @@ function addToFront()
 }//end addToFront
 
 // This function is called every time the button is clicked
-function handleGoButtonClick(event) {
-	// do events here
-	addToFront();
-	pushToArray();
-	domInput1("");
-	domInput2("");
+function handleGoButtonClick(event)
+{
+	//logic to prevent function from adding empty elements to array
+	if(domInput1())
+	{
+		pushToArray();
+		domInput1("");
+	}//end if
+
+	if(domInput2())
+	{
+		addToFront();
+		domInput2("");
+	}//end if
 	domTextOutput(exArray.toString());
 }//end handleGoButtonClick
 
