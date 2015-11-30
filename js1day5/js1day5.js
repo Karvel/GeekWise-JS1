@@ -5,10 +5,12 @@ GeekWise Javascript I
 
 Return a square root calculated manually.
 Return NaN for non numeric parameters. */
+
 function sqNum(numero)
 {
-    if(typeof numero != "number")
+    if(!numero || typeof numero != "number")
     {
+        alert("hmm");
         return NaN;
     }//end if
     var numSq = numero * numero;
@@ -20,11 +22,11 @@ the first letter capitalized and a period added
 at the end, if there is not one already. */
 function mkSentence(str)
 {
-    if(typeof str !== "string")
+    if(!str || typeof str !== "string")
     {
         return "";
     }//end if
-    if(str[str.length -1] === ".")
+    if(str[str.length - 1] === ".")
     {
         return str[0].toUpperCase() + str.slice(1);
     }//end if
@@ -39,7 +41,7 @@ function mkSentence(str)
 Leaves the middle character in an odd numbered string unchanged. */
 function splitString(str)
 {
-    if(typeof str !== "string" || str.length < 2)
+    if(!str || typeof str !== "string" || str.length < 2)
     {
         return "";
     }//end if
@@ -65,9 +67,15 @@ function splitString(str)
 an array or any of the four elements are NaN. */
 function numMean(arrNum)
 {
-    if(typeof arrNum !== "object" ||
+    if(!arrNum || typeof arrNum !== "object" ||
     (isNaN(arrNum[0]) || isNaN(arrNum[1]) ||
      isNaN(arrNum[2]) || isNaN(arrNum[3])))
+    {
+        return NaN;
+    }//end if
+
+    if(typeof arrNum[0] !== "number" || typeof arrNum[1] !== "number" ||
+       typeof arrNum[2] !== "number" || typeof arrNum[3] !== "number")
     {
         return NaN;
     }//end if
@@ -85,7 +93,7 @@ function numMean(arrNum)
 
 //The following are test calls.
 
-//alert(sqNum(9));
+//alert(sqNum(NaN));
 //alert(mkSentence("fff"));
-//alert(splitString("abc1efg"));
-//alert(numMean([1, 2, 3, 6]));
+//alert(splitString("abcdefg1hijklmn"));
+alert(numMean([1, 2, 3, 4]));
