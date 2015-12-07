@@ -1,0 +1,22 @@
+.page-header {
+    background-color: #224020;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+h1 {
+    color: #5A8C56;
+    font-family: 'Montserrat', cursive;
+    font-size: 24pt;
+    text-decoration: none;
+    text-align: center;
+}
+
+.content {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.list {
+    margin-top: 20px;
+}

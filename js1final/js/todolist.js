@@ -1,6 +1,6 @@
 /*
 Elanna Grossman
-December 3, 2015
+December 6, 2015
 GeekWise Javascript I
 Final Project
 
